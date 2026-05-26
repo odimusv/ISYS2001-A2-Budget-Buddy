@@ -46,14 +46,46 @@ This file shows sample entries for your **Developer's Diary**. You must document
 
 ---
 
-### Entry 3 – Business Context in AI Interactions
-**Artifact:** Screenshot of Gemini generating financial insights from data.
+### Entry 3 – Realistic Sample Transaction Data
+**Artifact:** ![entry3-sample-transactions](AI-CONVERSATIONS/entry3-sample-transactions.png)
 
-**Context:** I wanted AI to help generate business recommendations from spending analysis.
+**Screenshot to capture:** Screenshot the AI chat where it suggests realistic Australian transaction data with categories, dollar amounts, and at least one refund.
 
-**My Prompt:** "Based on this spending analysis showing Groceries: $450, Dining: $380, Coffee: $120, Transport: $95, create business insights and savings recommendations that sound professional for a personal finance app."
+**Context:** I needed realistic transaction data so I could test Budget Buddy before using a full uploaded CSV.
 
-**AI Response:** Generated specific recommendations like "Consider meal planning to reduce dining expenses" and "Coffee purchases represent 8% of total spending - consider brewing at home."
+**My Prompt:** "I'm building a Smart Finance Assistant called Budget Buddy for students and young adults in Australia. Create a small pandas sample transaction dataset with Date, Amount, Category, and Description columns. Include Australian-style businesses, dollar signs in amounts, different spending categories, and at least one negative refund amount so I can test data cleaning."
+
+**AI Response Summary:** AI suggested a simple sample transaction structure using categories like Groceries, Transport, Entertainment, Coffee, and Refund. It included string amounts such as `$45.50` and a negative refund amount so the cleaning function could be tested properly.
+
+**My Critique/Improvement:** I kept the dataset small because it was only for early testing, not final analysis. I made sure the data included messy but realistic features such as dollar signs and a negative refund because those are the kinds of issues that the later cleaning function needed to handle.
+
+**Result:** I created `df_sample` from the sample transaction dictionary and used it to test the cleaning and analysis functions in the notebook.
+
+**Reflection:** This helped me see that test data should not be too perfect. By adding a refund and dollar-formatted amounts early, I could check whether my later code handled real-world transaction data instead of only working on clean examples.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d specific recommendations like "Consider meal planning to reduce dining expenses" and "Coffee purchases represent 8% of total spending - consider brewing at home."
 
 **Reflection:** When I include business context and specify the audience (personal finance app users), AI generates much more relevant and professional output. I learned that framing requests in business terms gets business-quality responses. Now I always think about who will read the output and what decisions they need to make.
 
