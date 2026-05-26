@@ -208,6 +208,31 @@ This file shows sample entries for your **Developer's Diary**. You must document
 
 **Reflection:** AI helped me think beyond the happy path. I learned that testing should include realistic user mistakes because a finance assistant needs to fail clearly and safely when the data is wrong.
 
+---
+
+
+### Entry 12 – Integration Testing and Error Handling
+**Artifact:** ![entry12-integration-testing](AI-CONVERSATIONS/entry12-integration-testing.png)
+
+
+**Context:** I needed to test whether all parts of Budget Buddy work together, not just individually.
+
+**My Prompt:** "Create integration tests for Budget Buddy. The tests should run the full workflow from loading `sample_transactions.csv`, cleaning data, analysing spending, generating recommendations, creating a chat response, checking RAG retrieval, and testing the savings calculator. Also create error-handling tests for invalid file uploads, malformed data, missing columns, simulated chat connection failures, and invalid savings calculator inputs. Use assert statements and avoid relying on live network responses where possible."
+
+**AI Response Summary:** AI suggested an end-to-end test that loads the sample CSV, runs the full analysis pipeline, creates recommendations, tests the chatbot, checks document retrieval, and validates the savings calculator. It also suggested separate tests for file errors, malformed data, missing columns, connection failures, and invalid user inputs.
+
+**My Critique/Improvement:** I added a mocked chat response so the integration test does not depend on the live AI service being available. I also made the test fall back to a generated test dataset if the sample CSV cannot be found. This makes the test more reliable in different environments.
+
+**Result:** The final integration tests confirm that Budget Buddy’s main workflow works from CSV upload through to recommendations, chatbot context, document retrieval, savings calculator output, and user-friendly error handling.
+
+**Reflection:** This helped me learn the difference between unit testing and integration testing. Individual functions can work correctly, but the project is only complete when the data flows properly through the whole system.
+
+---
+
+
+
+
+
 
 ## AI Collaboration Best Practices I've Learned
 
@@ -237,6 +262,7 @@ This file shows sample entries for your **Developer's Diary**. You must document
 - Consider the end user's needs and context
 
 ---
+
 
 ## 📝 Documentation Template for Your Entries
 
