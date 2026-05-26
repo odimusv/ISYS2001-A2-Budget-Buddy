@@ -157,6 +157,22 @@ This file shows sample entries for your **Developer's Diary**. You must document
 ---
 
 
+### Entry 9 – Custom Savings Calculator Tool
+**Artifact:** ![entry9-savings-calculator-tool](AI-CONVERSATIONS/entry9-savings-calculator-tool.png)
+
+**Context:** I needed a custom financial tool that gives users a practical savings timeline.
+
+**My Prompt:** "Create a custom savings goal calculator for Budget Buddy. It should take current savings, monthly contribution, and target amount, then calculate the time needed to reach the goal. It should format the output clearly for a user, handle dollar signs and commas, reject invalid inputs, handle negative values, explain what happens when the goal is already reached, and register as a tool with `hands_on_ai.agent` if possible."
+
+**AI Response Summary:** AI suggested using the remaining savings amount divided by the monthly contribution to calculate the number of months required. It also suggested formatting the result with dollar values and a user-friendly explanation.
+
+**My Critique/Improvement:** I added validation for invalid numbers, negative current savings, negative contributions, zero contributions, and already-achieved goals. I also added an estimated finish month and made sure the tool still works even if agent registration is skipped.
+
+**Result:** The final `create_savings_calculator_tool()` function returns a callable savings calculator and attaches it to the agent module for use in the wider app.
+
+**Reflection:** This helped me learn that even a simple calculator needs careful input validation. AI gave me the formula, but I had to make it safe and understandable for real users.
+
+
 
 
 ## AI Collaboration Best Practices I've Learned
