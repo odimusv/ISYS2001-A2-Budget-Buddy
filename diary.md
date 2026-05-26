@@ -193,6 +193,21 @@ This file shows sample entries for your **Developer's Diary**. You must document
 ---
 
 
+### Entry 11 – Comprehensive Test Suite
+**Artifact:** ![entry11-comprehensive-tests](AI-CONVERSATIONS/entry11-comprehensive-tests.png)
+
+**Context:** I needed to prove that Budget Buddy works with normal data, edge cases, and broken data.
+
+**My Prompt:** "Create a comprehensive test suite for Budget Buddy. First, create realistic pandas test datasets including normal spending data, edge cases with refunds and zero amounts, missing values, invalid amount formats, invalid dates, missing columns, and a high-spending business scenario. Then create assert-based tests for the data loading function, spending analysis function, and business insights generator. The tests should verify category totals, percentages, refund handling, error handling, and user-friendly output."
+
+**AI Response Summary:** AI suggested test datasets for normal transactions, edge cases, invalid amounts, invalid dates, missing columns, and high entertainment spending. It also suggested using assert statements to check data types, totals, percentages, refunds, and report content.
+
+**My Critique/Improvement:** I made the tests more specific by checking known expected values, such as total spending, refund totals, and whether category percentages add up to approximately 100%. I also added `try/except` tests to confirm that bad inputs raise helpful `ValueError` messages.
+
+**Result:** The final comprehensive test suite checks data cleaning, spending analysis, business recommendations, invalid formats, missing data, and empty CSV handling.
+
+**Reflection:** AI helped me think beyond the happy path. I learned that testing should include realistic user mistakes because a finance assistant needs to fail clearly and safely when the data is wrong.
+
 
 ## AI Collaboration Best Practices I've Learned
 
