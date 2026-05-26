@@ -47,7 +47,7 @@ This file shows sample entries for your **Developer's Diary**. You must document
 ---
 
 ### Entry 3 – Realistic Sample Transaction Data
-**Artifact:** ![entry3-sample-transactions](AI-CONVERSATIONS/entry3-sample-transactions.png)
+**Artifact:** ![entry3-sample-transactions](AI-CONVERSATIONS/entry3-sample-transactions1.png)
 
 
 **Context:** I needed realistic transaction data so I could test Budget Buddy before using a full uploaded CSV.
