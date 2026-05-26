@@ -212,7 +212,8 @@ This file shows sample entries for your **Developer's Diary**. You must document
 
 
 ### Entry 12 – Integration Testing and Error Handling
-**Artifact:** ![entry12-integration-testing](AI-CONVERSATIONS/entry12-integration-testing.png)
+**Artifact:** ![entry12-integration-testing](AI-CONVERSATIONS/entry12-integration-testing1.png)
+![entry12-integration-testing](AI-CONVERSATIONS/entry12-integration-testing.png)
 
 
 **Context:** I needed to test whether all parts of Budget Buddy work together, not just individually.
