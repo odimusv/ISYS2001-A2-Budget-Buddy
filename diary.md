@@ -139,6 +139,23 @@ This file shows sample entries for your **Developer's Diary**. You must document
 
 
 
+### Entry 8 – Financial Document Retrieval Setup
+**Artifact:** ![entry8-rag-document-retrieval](AI-CONVERSATIONS/entry8-rag-document-retrieval.png)
+
+**Context:** I needed a simple RAG-style document retrieval feature for budgeting guidance and transaction summaries.
+
+**My Prompt:** "Help me set up a RAG system for Budget Buddy using `hands_on_ai.rag`. The function should create a small financial knowledge base with budgeting basics, spending category guidance, savings strategy, and a latest transaction summary if analysis data exists. It should index the documents if possible, but also include a clean keyword-search fallback if RAG indexing fails. Format answers in Markdown, avoid dumping huge raw text, and list the sources used."
+
+**AI Response Summary:** AI suggested creating text documents for budgeting basics, spending categories, and savings strategy, then indexing them for retrieval. It also suggested using a fallback search if the indexing system is not available.
+
+**My Critique/Improvement:** I improved the fallback so it scores documents by relevant keywords and boosts common finance topics like entertainment, coffee, groceries, savings, refunds, and budgets. I also changed the output so it gives a clean Budget Buddy answer with sources instead of a messy block of raw retrieved text.
+
+**Result:** The final `setup_financial_rag()` function creates a knowledge base folder, adds finance guidance documents, includes a transaction summary when available, and exposes `rag.ask()` for user questions.
+
+**Reflection:** This showed me that RAG is not only about retrieving documents. The answer format matters because users need a clear explanation and source list, not just copied text.
+
+---
+
 
 
 
