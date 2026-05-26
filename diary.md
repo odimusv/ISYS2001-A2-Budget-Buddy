@@ -62,8 +62,23 @@ This file shows sample entries for your **Developer's Diary**. You must document
 
 **Reflection:** This helped me see that test data should not be too perfect. By adding a refund and dollar-formatted amounts early, I could check whether my later code handled real-world transaction data instead of only working on clean examples.
 
+
 ---
 
+### Entry 4 – Data Loading and Cleaning Function
+**Artifact:** ![entry4-data-loading-cleaning](AI-CONVERSATIONS/entry4-data-loading-cleaning.png)
+
+**Context:** I needed a robust function to load and clean transaction data before any analysis could happen.
+
+**My Prompt:** "Create a Python function for Budget Buddy called `load_and_clean_transaction_data(file_path)`. It should load CSV transaction data or accept a pandas DataFrame with Date, Amount, Category, and Description columns. Handle dollar signs, commas, missing values, invalid dates, blank rows, refunds, and data validation. Include clear business-focused error messages suitable for a student finance assistant."
+
+**AI Response Summary:** AI suggested using pandas to read the CSV, check for required columns, clean the Amount column, convert dates, fill blank categories and descriptions, and raise clear errors for missing or invalid data.
+
+**My Critique/Improvement:** I improved the suggestion by allowing the function to accept both file paths and DataFrames, because the notebook tests use DataFrames as well as CSV files. I also added row numbers in error messages so users can find the problem in their CSV more easily. I added `Transaction_Type` and `Month` columns to support later analysis.
+
+**Result:** The final function loads transaction data, validates required columns, converts amounts and dates, handles missing text fields, identifies expenses and refunds, and returns a clean DataFrame ready for analysis.
+
+**Reflection:** AI gave me a useful structure, but I had to think about the user experience. Clear error messages are important because Budget Buddy is meant for non-technical users who may not understand pandas errors.
 
 
 
